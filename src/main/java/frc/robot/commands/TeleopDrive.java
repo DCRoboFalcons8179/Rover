@@ -18,6 +18,8 @@ public class TeleopDrive extends Command {
     this.tankDrive = tankDrive;
     this.speed = speed;
     this.turn = turn;
+
+    addRequirements(tankDrive);
   }
 
   // Called when the command is initially scheduled.
