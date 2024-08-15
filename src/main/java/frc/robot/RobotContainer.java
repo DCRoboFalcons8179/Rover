@@ -26,7 +26,7 @@ public class RobotContainer {
 
   public RobotContainer() {
     // Drives the robot
-    tankDrive.setDefaultCommand(new TeleopDrive(tankDrive, () -> driverController.getRawAxis(XboxController.Axis.kLeftY.value), () -> Filter.powerCurve(driverController.getRawAxis(XboxController.Axis.kRightX.value), 3)));
+    tankDrive.setDefaultCommand(new TeleopDrive(tankDrive, () -> driverController.getRawAxis(XboxController.Axis.kLeftY.value), () -> -Filter.powerCurve(driverController.getRawAxis(XboxController.Axis.kRightX.value), 3)));
     configureBindings();
   }
 
